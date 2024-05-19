@@ -5,3 +5,4 @@ postcss.config.js
 tailwind.config.ts
 vite.config.mts
 public
+main.tsx
