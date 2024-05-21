@@ -6,3 +6,4 @@ tailwind.config.ts
 vite.config.mts
 public
 main.tsx
+*.enum.ts
