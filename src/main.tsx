@@ -4,10 +4,14 @@ import App from 'App';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const root = document.getElementById('root');
+if (root) {
+  root.className = 'h-screen w-screen overflow-scroll no-scrollbar';
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}

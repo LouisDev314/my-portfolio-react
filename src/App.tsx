@@ -1,5 +1,5 @@
 import NavBar from '@shared/components/nav-bar';
-import MainPage from './pages';
+import IndexPage from './pages';
 import Page from '@shared/enum/page.enum';
 import { Route, Routes } from 'react-router-dom';
 
@@ -8,21 +8,21 @@ function App() {
     <>
       <header className="absolute">Louis Chan</header>
       <NavBar />
-      <main className="bg-white">
+      <main className="bg-white h-full">
         <Routes>
-          <Route path="/" element={<MainPage page={Page.Home} />} />
-          <Route path="/projects" element={<MainPage page={Page.Project} />} />
-          <Route path="/about-me" element={<MainPage page={Page.AboutMe} />} />
-          <Route path="/blog" element={<MainPage page={Page.Blog} />} />
-          <Route path="/contact" element={<MainPage page={Page.Contact} />} />
+          <Route path="/" element={<IndexPage page={Page.Home} />} />
+          <Route path="/projects" element={<IndexPage page={Page.Project} />} />
+          <Route path="/about-me" element={<IndexPage page={Page.AboutMe} />} />
+          <Route path="/blog" element={<IndexPage page={Page.Blog} />} />
+          <Route path="/contact" element={<IndexPage page={Page.Contact} />} />
           <Route
             path="/my-secret-place"
-            element={<MainPage page={Page.MySecretPlace} />}
+            element={<IndexPage page={Page.MySecretPlace} />}
           />
-          <Route path="*" element={<MainPage page={Page.NotFound} />} />
+          <Route path="*" element={<IndexPage page={Page.NotFound} />} />
         </Routes>
       </main>
-      <footer>This is footer</footer>
+      <footer className="bottom-0">This is footer</footer>
     </>
   );
 }

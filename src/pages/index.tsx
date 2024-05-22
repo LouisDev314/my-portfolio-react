@@ -7,11 +7,11 @@ import ContactPage from './contact';
 import MySecretPlacePage from './my-secret-place';
 import NotFoundPage from './not-found';
 
-interface IMainPage {
+interface IIndexPage {
   page: Page;
 }
 
-const MainPage = (props: IMainPage) => {
+const IndexPage = (props: IIndexPage) => {
   const renderSwitch = () => {
     switch (props.page) {
       case Page.Home:
@@ -34,4 +34,4 @@ const MainPage = (props: IMainPage) => {
   return <>{renderSwitch()}</>;
 };
 
-export default MainPage;
+export default IndexPage;
