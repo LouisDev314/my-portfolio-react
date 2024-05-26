@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = document.getElementById('root');
 if (root) {
-  root.className = 'h-screen w-screen overflow-scroll no-scrollbar';
+  root.className = 'h-screen w-screen overflow-auto no-scrollbar';
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <BrowserRouter>

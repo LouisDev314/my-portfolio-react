@@ -1,9 +1,12 @@
+import { IBaseComponent } from '@interfaces/base-component.interface';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+interface INavBar extends IBaseComponent {}
+
+const NavBar = (props: INavBar) => {
   return (
-    <nav>
-      <ul className="flex gap-x-10 justify-end">
+    <nav className={props.class}>
+      <ul className="flex gap-x-8 right-0 mr-10 mt-8">
         <Link to={'/'} className="font-bold">
           Home
         </Link>
